@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  background: black;
+  font-family: "Gilroy";
+  position: relative;
+  overflow: hidden;
+}
+
+main h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: crimson;
+  font-size: 10vw;
+  font-weight: 900;
+  overflow: hidden;
+  z-index: 1;
+}
+
+main h1 span {
+  display: inline-block;
+}
+
+.custom-cursor {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  background: white;
+  border-radius: 50%;
+  position: fixed;
+  scale: 0;
+  z-index: 9;
+}
+
+.background-img {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.301);
+  backdrop-filter: blur(30px);
+  height: 60px;
+  width: 100%;
+  position: absolute;
+  top: -60px;
+  z-index: 9;
+}
+
+.brand h2 {
+  text-decoration: underline crimson;
+  cursor: pointer;
+  color: white;
+  font-size: 25px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+  z-index: 3;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.nav-item {
+  border-bottom: 2px solid crimson;
+  padding: 5px 10px;
+  font-weight: 300;
+  cursor: pointer;
+  color: white;
+  z-index: 10;
+}
+
+#menu-toggle {
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+#menu-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 20px;
+  z-index: 14;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+.menu-items {
+  z-index: 14;
+  position: absolute;
+  top: 0;
+  right: -40%;
+  height: 100%;
+  width: 40%;
+  padding: 10% 5%;
+  color: white;
+  display: none;
+  backdrop-filter: blur(30px);
+}
+
+.menu-items a {
+  font-size: 20px;
+  display: block;
+  margin: 15px 0;
+  cursor: pointer;
+  width: fit-content;
+  font-weight: 300;
+  border-bottom: 1px solid crimson;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-item:hover, .menu-items a:hover {
+  background: crimson;
+}
+
+::selection {
+  color: lightseagreen;
+}
+
+@media (max-width: 860px) {
+  .nav-links {
+    display: none;
+  }
+  #menu-toggle{
+    display: block;
+  }
+}
